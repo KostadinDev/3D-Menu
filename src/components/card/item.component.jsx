@@ -8,7 +8,7 @@ export const Item = (props) => (
             {props.item.name}
         </h2>
         <p>
-            <img alt="props.item.alt" src={props.item.image} style={{width: '160px', height: '160px'}} />
+            <img alt={props.item.alt} src={props.item.image} style={{width: '160px', height: '160px'}} onClick={() => alert('hello')} />
             {props.item.description}
         </p>
     </div>

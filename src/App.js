@@ -3,39 +3,59 @@ import {CardList} from './components/card-list/card-list.component';
 import {ItemList} from './components/card-list/item-list.component';
 import './App.css';
 import {SearchBox} from './components/search-box/search-box.component'
+import LocoMoco from "./images/item-images/loco-moco.jpg";
+import KaluaPig from "./images/item-images/kalua-pig.png";
+import LauLau from "./images/item-images/laulau.png";
+import Poke from "./images/item-images/poke.png";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      monsters: [],
-      searchField: '',
-      items: [],
+    constructor() {
+        super();
+        this.state = {
+            searchField: '',
+            items: [{name: "Loco Moco", Description: "", image: LocoMoco, alt: "Loco Moco", id: 0},
+                {name: "Kalua Pig", Description: "", image: KaluaPig, alt: "Kalua Pig", id: 1},
+                {name: "Lau Lau", Description: "", image: LauLau, alt: "Laulau", id: 2},
+                {name: "Poke", Description: "", image: Poke, alt: "Poke", id: 3},
+                {name: "Loco Moco", Description: "", image: LocoMoco, alt: "Loco Moco", id: 4},
+                {name: "Kalua Pig", Description: "", image: KaluaPig, alt: "Kalua Pig", id: 5},
+                {name: "Lau Lau", Description: "", image: LauLau, alt: "Laulau", id: 6},
+                {name: "Poke", Description: "", image: Poke, alt: "Poke", id: 7},
+                {name: "Loco Moco", Description: "", image: LocoMoco, alt: "Loco Moco", id: 8},
+                {name: "Kalua Pig", Description: "", image: KaluaPig, alt: "Kalua Pig", id: 9},
+                {name: "Lau Lau", Description: "", image: LauLau, alt: "Laulau", id: 10},
+                {name: "Poke", Description: "", image: Poke, alt: "Poke", id: 11},
+                {name: "Loco Moco", Description: "", image: LocoMoco, alt: "Loco Moco", id: 12},
+                {name: "Kalua Pig", Description: "", image: KaluaPig, alt: "Kalua Pig", id: 13},
+                {name: "Lau Lau", Description: "", image: LauLau, alt: "Laulau", id: 14},
+                {name: "Poke", Description: "", image: Poke, alt: "Poke", id: 15}],
+        };
+    }
+
+    handleChange = (e) => {
+        this.setState({searchField: e.target.value, title: e.target.value})
     };
-  }
 
-  handleChange = (e) => {
-    this.setState({searchField: e.target.value})
-  };
+    componentDidMount() {
+    }
 
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users => this.setState({monsters: users}));
-  }
+    onSearchChange = event => {
+        this.setState({searchField: event.target.value});
+    };
 
-  render() {
-    const {monsters, searchField} = this.state;
-    return (
-        <div className="App">
-          <h1> Campus Center Dining </h1>
-          <SearchBox handleChange={this.handleChange} placeholder='search items'/>
-          <ItemList />
+    render() {
+        const {searchField, items} = this.state;
+        const filteredItems = items.filter(item => item.name.toLowerCase().includes(searchField.toLowerCase()));
 
-
-        </div>
-    );
-  }
+        return (
+            <div className="App">
+                <h1> Campus Center Dining </h1>
+                <SearchBox onSearchChange={this.onSearchChange} handleChange={this.handleChange}
+                           placeholder='search items'/>
+                <ItemList items={items}/>
+            </div>
+        );
+    }
 }
 
 export default App;
