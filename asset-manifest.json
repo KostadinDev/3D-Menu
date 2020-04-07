@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/3d-menu/static/css/main.eddc1058.chunk.css",
-    "main.js": "/3d-menu/static/js/main.d9afd994.chunk.js",
-    "main.js.map": "/3d-menu/static/js/main.d9afd994.chunk.js.map",
+    "main.css": "/3d-menu/static/css/main.33069877.chunk.css",
+    "main.js": "/3d-menu/static/js/main.a28cec64.chunk.js",
+    "main.js.map": "/3d-menu/static/js/main.a28cec64.chunk.js.map",
     "runtime-main.js": "/3d-menu/static/js/runtime-main.1490495a.js",
     "runtime-main.js.map": "/3d-menu/static/js/runtime-main.1490495a.js.map",
     "static/css/2.83b59b6d.chunk.css": "/3d-menu/static/css/2.83b59b6d.chunk.css",
-    "static/js/2.04e76e56.chunk.js": "/3d-menu/static/js/2.04e76e56.chunk.js",
-    "static/js/2.04e76e56.chunk.js.map": "/3d-menu/static/js/2.04e76e56.chunk.js.map",
+    "static/js/2.d2f5b757.chunk.js": "/3d-menu/static/js/2.d2f5b757.chunk.js",
+    "static/js/2.d2f5b757.chunk.js.map": "/3d-menu/static/js/2.d2f5b757.chunk.js.map",
     "index.html": "/3d-menu/index.html",
-    "precache-manifest.79d47a9d6deb7ad9898029c67b461039.js": "/3d-menu/precache-manifest.79d47a9d6deb7ad9898029c67b461039.js",
+    "precache-manifest.e41e8265f6454fed96b81c4d5a081f5d.js": "/3d-menu/precache-manifest.e41e8265f6454fed96b81c4d5a081f5d.js",
     "service-worker.js": "/3d-menu/service-worker.js",
     "static/css/2.83b59b6d.chunk.css.map": "/3d-menu/static/css/2.83b59b6d.chunk.css.map",
-    "static/css/main.eddc1058.chunk.css.map": "/3d-menu/static/css/main.eddc1058.chunk.css.map",
-    "static/js/2.04e76e56.chunk.js.LICENSE.txt": "/3d-menu/static/js/2.04e76e56.chunk.js.LICENSE.txt",
+    "static/css/main.33069877.chunk.css.map": "/3d-menu/static/css/main.33069877.chunk.css.map",
+    "static/js/2.d2f5b757.chunk.js.LICENSE.txt": "/3d-menu/static/js/2.d2f5b757.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/3d-menu/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/3d-menu/static/media/fa-solid-900.ec763292.svg",
     "static/media/kalua-pig.png": "/3d-menu/static/media/kalua-pig.62fcfd9d.png",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.1490495a.js",
     "static/css/2.83b59b6d.chunk.css",
-    "static/js/2.04e76e56.chunk.js",
-    "static/css/main.eddc1058.chunk.css",
-    "static/js/main.d9afd994.chunk.js"
+    "static/js/2.d2f5b757.chunk.js",
+    "static/css/main.33069877.chunk.css",
+    "static/js/main.a28cec64.chunk.js"
   ]
 }
