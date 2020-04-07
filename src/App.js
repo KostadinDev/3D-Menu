@@ -62,7 +62,7 @@ class App extends Component {
                 <h1> Campus Center Dining </h1>
                 <SearchBox onSearchChange={this.onSearchChange} handleChange={this.handleChange}
                            placeholder='search items'/>
-                <ItemList items={items}/>
+                <ItemList items={filteredItems}/>
                 {this.state.persons[0]}
             </div>
         );
