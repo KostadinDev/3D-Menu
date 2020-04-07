@@ -8,6 +8,8 @@ import KaluaPig from "./images/item-images/kalua-pig.png";
 import LauLau from "./images/item-images/laulau.png";
 import Poke from "./images/item-images/poke.png";
 
+import axios from 'axios';
+
 class App extends Component {
     constructor() {
         super();
@@ -29,6 +31,7 @@ class App extends Component {
                 {name: "Kalua Pig", Description: "", image: KaluaPig, alt: "Kalua Pig", id: 13},
                 {name: "Lau Lau", Description: "", image: LauLau, alt: "Laulau", id: 14},
                 {name: "Poke", Description: "", image: Poke, alt: "Poke", id: 15}],
+            persons: []
         };
     }
 
@@ -37,6 +40,13 @@ class App extends Component {
     };
 
     componentDidMount() {
+
+        const authentication = {"username":"csedviz@hawaii.edu","password":"bambam50$"};
+        axios.post(`https://cloud-sg.dseelab.com/aquarius/rest/v1/token`, {authentication})
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
     }
 
     onSearchChange = event => {
@@ -53,6 +63,7 @@ class App extends Component {
                 <SearchBox onSearchChange={this.onSearchChange} handleChange={this.handleChange}
                            placeholder='search items'/>
                 <ItemList items={items}/>
+                {this.state.persons[0]}
             </div>
         );
     }
